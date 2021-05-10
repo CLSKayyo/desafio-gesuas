@@ -1,0 +1,84 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F7F7F7;
+}
+
+
+/* ------------ Classes Genéricas ------------ */
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+}
+
+.shadow {
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.w-60 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.w-90 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+
+/* ------------ Outras Classes ----------- */
+
+h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.cad-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #F1F1F1;
+}
+
+table thead tr {
+    background-color: #F1F1F1;
+}

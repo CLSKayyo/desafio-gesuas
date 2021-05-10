@@ -10,7 +10,8 @@ body {
 /* ------------ Classes Genéricas ------------ */
 
 h1,
-h2 {
+h2,
+h3 {
     text-align: center;
 }
 
@@ -54,6 +55,14 @@ h2 {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 10px;
+}
+
+p.success {
+    text-align: center;
+}
+
+p.success b {
+    color: green;
 }
 
 .search-form {

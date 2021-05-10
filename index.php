@@ -23,6 +23,13 @@ require 'header.php';
             <input type="text" name="cad_nome">
             <button type="submit">Cadastrar</button>
         </form>
+        <?php if($create){ ?>
+            <p class="success"><b>Usuário criado com sucesso!!</b> <br>
+            Dados <br>
+            -Nome: <?=$nome?> <br>
+            -NIS: <?=$nis?>
+            </p>
+        <?php } ?>
     </div>
 
     <div class="card w-90 mt-40">
@@ -31,7 +38,7 @@ require 'header.php';
         <form method="post" class="search-form">
             <div></div>
             <input type="text" name="search_nis" placeholder="NIS">
-            <button type="submit">Buscar</button>
+            <button type="submit">Buscar/Resetar</button>
         </form>
 
         <table>
@@ -45,13 +52,16 @@ require 'header.php';
             <tbody>
                 <?php foreach ($users as $user) { ?>
                     <tr>
-                        <td><?=$user->id?></td>
-                        <td><?=$user->nome?></td>
-                        <td><?=$user->nis?></td>
+                        <td><?= $user->id ?></td>
+                        <td><?= $user->nome ?></td>
+                        <td><?= $user->nis ?></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
+        <?php if (count($users) == 0) { ?>
+            <h3>Nenhum usuário encontrado com a pesquisa de NIS "<?= $nis ?>".</h3>
+        <?php } ?>
     </div>
 </body>
 

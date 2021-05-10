@@ -3,7 +3,7 @@ require 'header.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@ require 'header.php';
     <div class="card w-90 mt-40">
         <h2>Listagem de usuários</h2>
 
-        <form class="search-form">
+        <form method="post" class="search-form">
             <div></div>
             <input type="text" name="search_nis" placeholder="NIS">
             <button type="submit">Buscar</button>

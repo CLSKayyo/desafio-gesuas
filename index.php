@@ -37,7 +37,7 @@ require 'header.php';
 
         <form method="post" class="search-form">
             <div></div>
-            <input type="text" name="search_nis" placeholder="NIS">
+            <input type="text" name="search_nis" placeholder="NIS" <?=($search)? "value='$nis'" : '' ?>>
             <button type="submit">Buscar/Resetar</button>
         </form>
 
@@ -59,7 +59,7 @@ require 'header.php';
                 <?php } ?>
             </tbody>
         </table>
-        <?php if (count($users) == 0) { ?>
+        <?php if ($search && count($users) == 0) { ?>
             <h3>Nenhum usuário encontrado com a pesquisa de NIS "<?= $nis ?>".</h3>
         <?php } ?>
     </div>

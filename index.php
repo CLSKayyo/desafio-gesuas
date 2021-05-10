@@ -20,7 +20,7 @@ require 'header.php';
     <div class="card w-60">
         <h2 class="text-center">Cadastrar novo usuário</h2>
         <form method="post" class="cad-form">
-            <input type="text" name="cad_nome">
+            <input type="text" name="cad_nome" placeholder="Nome">
             <button type="submit">Cadastrar</button>
         </form>
         <?php if($create){ ?>

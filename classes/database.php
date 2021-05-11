@@ -37,20 +37,20 @@ class DBController {
 
     // Funcao Select
     function select($table, $where = '', $columns = '*') {
-        try{
+        try {
             $sql = "SELECT $columns FROM $table";
-    
+
             if ($where != '') {
                 $sql .= " WHERE $where";
             }
-    
+
             $rs = $this->con->query($sql);
-    
+
             $result = array();
             while ($row = $rs->fetch(PDO::FETCH_OBJ)) {
                 $result[] = $row;
             }
-    
+
             return $result;
         } catch (PDOException $e) {
             echo 'Erro com o Banco: ' . $e->getMessage();
@@ -71,5 +71,18 @@ class DBController {
         } catch (PDOException $e) {
             echo 'Erro com o Banco: ' . $e->getMessage();
         }
+
+        // Bloco utilizado para testes, garantindo que em todos os casos
+        // incorretos seja lançada uma exceção e não incluídos dados
+        // não esperados no banco
+        
+        // $stmt = $this->con->prepare($query);
+        // if ($bind) {
+        //     $stmt->execute($bind);
+        // } else {
+        //     $stmt->execute();
+        // }
+
+        // return $stmt->rowCount();
     }
 }
